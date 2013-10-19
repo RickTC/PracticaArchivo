@@ -6,7 +6,11 @@ namespace Practica4
 	{
 		public static void Main (string[] args)
 		{
+			Funciones funcion = new Funciones();
 			
+			funcion.leerArchivo();
+			funcion.imprimir();
+				
 		}
 	}
 }

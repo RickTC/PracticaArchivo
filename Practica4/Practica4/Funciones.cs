@@ -6,12 +6,12 @@ namespace Practica4
 {
 	public class Funciones
 	{
-		RegistroPersona registrar = new  RegistroPersona();
+		RegistraPersona registrar = new  RegistraPersona();
 		ArrayList arraywords = new ArrayList();
 		
 		public Funciones ()
 		{
-			this.registrar = new RegistroPersona();
+			this.registrar = new RegistraPersona();
 			this.arraywords = new ArrayList();			
 		}
 		
@@ -32,7 +32,7 @@ namespace Practica4
 						char [] delimita={'.','-',','};
 						string [] pal = linea.Split(delimita);
 					
-						RegistroPersona reg = new RegistroPersona();
+						RegistraPersona reg = new RegistraPersona();
 					
 						reg.id = pal[0];
 						reg.nombre = pal[1];
@@ -55,6 +55,24 @@ namespace Practica4
 				}
 			
 		}
+		
+		public void imprimir()
+		{
+				foreach(object Captura in arraywords)
+				{
+					this.registrar = (RegistraPersona)Captura;
+					verlista();
+				}
+		}
+		public void verlista()
+		{
+			Console.WriteLine ("Id: " + registrar.id);
+			Console.WriteLine ("Nombre: "+ registrar.nombre);
+			Console.WriteLine ("Domicilio: "+ registrar.domicilio);
+			Console.WriteLine ("Telefono: "+ registrar.telefono);
+			Console.WriteLine ();
+		}	
+		
 	}
 }
 
